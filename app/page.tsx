@@ -183,9 +183,11 @@ export default function Home() {
                     <span className="text-2xl font-bold text-blue-900">₹8,500</span>
                     <span className="text-blue-700">/month</span>
                   </div>
-                  <Button className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white">
-                    Book Now
-                  </Button>
+                  <Link href="/rooms" passHref>
+                    <Button className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white">
+                      Book Now
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -232,9 +234,11 @@ export default function Home() {
                     <span className="text-2xl font-bold text-blue-900">₹6,000</span>
                     <span className="text-blue-700">/month</span>
                   </div>
-                  <Button className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white">
-                    Book Now
-                  </Button>
+                  <Link href="/rooms" passHref>
+                    <Button className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white">
+                      Book Now
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -297,9 +301,11 @@ export default function Home() {
                     <span className="text-gray-700">Hygienic Mess with Nutritious Meals</span>
                   </li>
                 </ul>
-                <Button className="mt-6 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white">
-                  View Details
-                </Button>
+                <Link href="/hostels" passHref>
+                  <Button className="mt-6 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white">
+                    View Details
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -337,9 +343,11 @@ export default function Home() {
                     <span className="text-gray-700">Hygienic Mess with Customized Menu</span>
                   </li>
                 </ul>
-                <Button className="mt-6 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white">
-                  View Details
-                </Button>
+                <Link href="/hostels" passHref>
+                  <Button className="mt-6 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white">
+                    View Details
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -557,14 +565,12 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center text-center p-6 rounded-lg bg-white shadow-sm transition-all hover:shadow-md ${
-                  item.color === "blue" ? "hover:bg-blue-50" : "hover:bg-orange-50"
-                }`}
+                className={`flex flex-col items-center text-center p-6 rounded-lg bg-white shadow-sm transition-all hover:shadow-md ${item.color === "blue" ? "hover:bg-blue-50" : "hover:bg-orange-50"
+                  }`}
               >
                 <div
-                  className={`mb-4 rounded-full p-3 ${
-                    item.color === "blue" ? "bg-blue-100 text-blue-700" : "bg-orange-100 text-orange-600"
-                  }`}
+                  className={`mb-4 rounded-full p-3 ${item.color === "blue" ? "bg-blue-100 text-blue-700" : "bg-orange-100 text-orange-600"
+                    }`}
                 >
                   {item.icon}
                 </div>
