@@ -1,6 +1,7 @@
 import RoomCard from "../../components/RoomCard";
 import { rooms } from "../../data/rooms";
 
+
 export default function Rooms() {
   return (
     <main className="p-6">

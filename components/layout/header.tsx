@@ -42,44 +42,39 @@ export default function Header() {
             <span className="text-sm text-blue-700">Of Institution</span>
           </div>
         </Link>
+
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          {["Home", "Rooms", "Hostels", "Amenities", "Location", "Contact"].map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="text-sm font-medium hover:text-orange-600 transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
+          <Link href="/" className="text-sm font-medium hover:text-orange-600 transition-colors">
+            Home
+          </Link>
+          <Link href="/rooms" className="text-sm font-medium hover:text-orange-600 transition-colors">
+            Rooms
+          </Link>
+          <Link href="/hostels" className="text-sm font-medium hover:text-orange-600 transition-colors">
+            Hostels
+          </Link>
+          <Link href="/amenities" className="text-sm font-medium hover:text-orange-600 transition-colors">
+            Amenities
+          </Link>
+          <Link href="/location" className="text-sm font-medium hover:text-orange-600 transition-colors">
+            Location
+          </Link>
+          <Link href="/contact" className="text-sm font-medium hover:text-orange-600 transition-colors">
+            Contact
+          </Link>
         </nav>
+
+        {/* Buttons */}
         <div className="flex items-center gap-4">
-          <Button
-            variant="outline"
-            size="sm"
-            className="hidden md:flex border-orange-600 text-orange-600 hover:bg-orange-50"
-          >
+          <Button variant="outline" size="sm" className="hidden md:flex border-orange-600 text-orange-600 hover:bg-orange-50">
             Login
           </Button>
-          <Button
-            size="sm"
-            className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white"
-          >
+          <Button size="sm" className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white">
             Book Now
           </Button>
           <button className="md:hidden" aria-label="Toggle Menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
               <line x1="4" x2="20" y1="12" y2="12" />
               <line x1="4" x2="20" y1="6" y2="6" />
               <line x1="4" x2="20" y1="18" y2="18" />
@@ -115,18 +110,7 @@ export default function Header() {
                 className="absolute top-4 right-4 text-gray-600 hover:text-orange-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
                   <line x1="18" y1="6" x2="6" y2="18" />
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
@@ -134,28 +118,29 @@ export default function Header() {
 
               {/* Mobile Navigation Links */}
               <nav className="flex flex-col space-y-4 mt-8">
-                {["Home", "Rooms", "Hostels", "Amenities", "Location", "Contact"].map((item) => (
-                  <Link
-                    key={item}
-                    href={`/${item.toLowerCase()}`}
-                    className="text-sm font-medium hover:text-orange-600 transition-all duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </Link>
-                ))}
+                <Link href="/" className="text-sm font-medium hover:text-orange-600 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>
+                  Home
+                </Link>
+                <Link href="/rooms" className="text-sm font-medium hover:text-orange-600 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>
+                  Rooms
+                </Link>
+                <Link href="/hostels" className="text-sm font-medium hover:text-orange-600 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>
+                  Hostels
+                </Link>
+                <Link href="/amenities" className="text-sm font-medium hover:text-orange-600 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>
+                  Amenities
+                </Link>
+                <Link href="/location" className="text-sm font-medium hover:text-orange-600 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>
+                  Location
+                </Link>
+                <Link href="/contact" className="text-sm font-medium hover:text-orange-600 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>
+                  Contact
+                </Link>
                 <div className="pt-4">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full border-orange-600 text-orange-600 hover:bg-orange-50 mb-2"
-                  >
+                  <Button variant="outline" size="sm" className="w-full border-orange-600 text-orange-600 hover:bg-orange-50 mb-2">
                     Login
                   </Button>
-                  <Button
-                    size="sm"
-                    className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white"
-                  >
+                  <Button size="sm" className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white">
                     Book Now
                   </Button>
                 </div>
